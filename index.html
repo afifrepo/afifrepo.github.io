@@ -7,9 +7,63 @@
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-    <div>
-        <h1 style="display: block;">Halo!</h1>
-        <p>cengkeh.com oleh afif</p>
-    </div>
+    <nav>
+        <div class="logo" onclick="toTop()" style="cursor: pointer;">cengkeh.com</div>
+        <div class="nav-links">
+            <a onclick="toTop()" title="Home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="centers cards">
+            <div class="txt-center">
+                <h1 style="font-size: 5rem;">Hello!</h1>
+                <p>Selamat datang di cengkeh</p>
+            </div> 
+        </div>
+        <div class="cards">
+            <h3>Informasi</h3>
+            <p>cengkeh.com masih dalam konstruksi. Tunggu aja yh xixixi</p>
+        </div>
+        <div class="cards" id="about">
+            <h2>Tentang Cengkeh</h2><br />
+            <p>cengkeh.com (Cengkeh) adalah website multiguna yang dikembangkan oleh Abdullah Afif Habiburrohman, mahasiswa Sekolah Vokasi Universitas Gadjah Mada. Cengkeh akan digunakan untuk arsip, portofolio, dan tempat eksperimen pribadi.</p><br />
+            
+            <h2>Filosofi Cengkeh</h2><br />
+            <p>Cengkeh, sebagai salah satu rempah-rempah yang sangat berharga, memiliki filosofi yang dalam dalam konteks budaya dan kehidupan manusia. Filosofi cengkeh mengajarkan kita tentang nilai-nilai kesehatan, keberanian, budaya, hubungan dengan alam, dan keberagaman. Cengkeh bukan hanya sekadar rempah, tetapi juga menjadi simbol dari berbagai aspek kehidupan yang berharga.</p>
+        </div>
+        <div class="cards" id="contact">
+            <h2>Kontak</h2><br />
+            <p>email: afif@cengkeh.com</p><br />
+            <p>instagram: @abdl.af</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Arsip cengkeh</p>
+        <p>&copy; 2024 cengkeh.com oleh Afif</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+        function toTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            if(mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
 </body>
 </html>
